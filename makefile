@@ -4,4 +4,4 @@ macos/build:
 	install_name_tool -add_rpath lib/ bin/venture
 
 macos/run: macos/build
-	bin/venture
+	@ bin/venture
