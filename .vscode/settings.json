@@ -1,6 +1,13 @@
 {
     "files.associations": {
         "sdl_main.h": "c",
-        "sdl.h": "c"
+        "sdl.h": "c",
+        "__verbose_abort": "c",
+        "cstddef": "c",
+        "cstdint": "c",
+        "ctime": "c",
+        "initializer_list": "c",
+        "limits": "c",
+        "ratio": "c"
     }
 }
