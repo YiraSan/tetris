@@ -368,7 +368,7 @@ void pushDown(void) {
         }
     }
     app.moving = NO_SHAPE;
-    app.delay -= 20;
+    app.delay -= 15;
     if (app.delay < 150) app.delay = 150;
 }
 
@@ -453,6 +453,8 @@ bool ingameLogic(void) {
                     }
                 }
                 SDL_memset4(&app.grid[0], NO_SHAPE, sizeof(app.grid[0]));
+                app.delay -= 40;
+                if (app.delay < 150) app.delay = 150;
                 break;
             } else if (app.grid[y][x] == NO_SHAPE) {
                 break;
@@ -485,7 +487,7 @@ bool ingameLogic(void) {
         if (isColliding(app.shapePos, getShape(app.moving, app.rotation))) {
             app.shapePos.y -= 1;
             pushDown();
-            app.delay -= 30;
+            app.delay -= 15;
             if (app.delay < 150) app.delay = 150;
         }
     }
